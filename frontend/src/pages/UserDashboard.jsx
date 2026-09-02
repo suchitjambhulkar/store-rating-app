@@ -47,7 +47,7 @@ function UserDashboard() {
 
         void Promise.resolve().then(() => loadStores());
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [navigate, token, user]);
+    }, [navigate, token]);
 
     const handleSearch = (event) => {
         event.preventDefault();
