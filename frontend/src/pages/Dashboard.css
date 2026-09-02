@@ -1,0 +1,548 @@
+/* =========================================
+   USER DASHBOARD
+========================================= */
+
+.dashboard-page {
+    min-height: 100vh;
+    background: #f5f7fb;
+    color: #0f172a;
+}
+
+.dashboard-content {
+    width: 88%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 55px 0 70px;
+}
+
+/* =========================================
+   DASHBOARD HEADING
+========================================= */
+
+.dashboard-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 35px;
+}
+
+.dashboard-label {
+    margin: 0 0 8px;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+.dashboard-heading h1 {
+    margin: 0;
+    color: #0f172a;
+    font-size: 42px;
+    line-height: 1.15;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.dashboard-heading > div:first-child > p:last-child {
+    margin: 12px 0 0;
+    max-width: 700px;
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* =========================================
+   STORE COUNT
+========================================= */
+
+.store-count {
+    min-width: 105px;
+    padding: 14px 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.06);
+}
+
+.store-count strong {
+    color: #2563eb;
+    font-size: 24px;
+}
+
+.store-count span {
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* =========================================
+   STORE GRID
+========================================= */
+
+.store-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 25px;
+}
+
+/* =========================================
+   STORE CARD
+========================================= */
+
+.store-card {
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 8px 25px rgba(15, 23, 42, 0.06);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.store-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #bfdbfe;
+
+    box-shadow:
+        0 18px 40px rgba(15, 23, 42, 0.10);
+}
+
+/* =========================================
+   CARD HEADER
+========================================= */
+
+.store-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+}
+
+.store-card-header h3 {
+    margin: 0;
+
+    color: #0f172a;
+
+    font-size: 20px;
+    line-height: 1.35;
+
+    font-weight: 750;
+}
+
+/* =========================================
+   OVERALL RATING
+========================================= */
+
+.store-rating {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 5px;
+
+    padding: 6px 10px;
+
+    background: #fff7ed;
+
+    border: 1px solid #fed7aa;
+
+    border-radius: 8px;
+
+    color: #ea580c;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+/* =========================================
+   ADDRESS
+========================================= */
+
+.store-address {
+    margin: 10px 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* =========================================
+   EMAIL
+========================================= */
+
+.store-email {
+    margin: 8px 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    word-break: break-word;
+}
+
+/* =========================================
+   RATING FORM
+========================================= */
+
+.rating-form {
+    margin-top: 22px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #eef2f7;
+}
+
+.rating-form > label {
+    display: block;
+
+    margin-bottom: 12px;
+
+    color: #334155;
+
+    font-size: 14px;
+
+    font-weight: 700;
+}
+
+/* =========================================
+   STAR OPTIONS
+========================================= */
+
+.rating-options {
+    display: flex;
+    align-items: center;
+
+    gap: 5px;
+
+    margin-bottom: 18px;
+}
+
+.rating-options .star {
+    position: relative;
+
+    cursor: pointer;
+
+    color: #cbd5e1;
+
+    font-size: 30px;
+
+    line-height: 1;
+
+    transition:
+        color 0.15s ease,
+        transform 0.15s ease;
+}
+
+/* Hide radio button */
+
+.rating-options .star input {
+    position: absolute;
+
+    opacity: 0;
+
+    width: 0;
+    height: 0;
+}
+
+/* Selected stars */
+
+.rating-options .star.selected {
+    color: #f59e0b;
+}
+
+/* Hover */
+
+.rating-options .star:hover {
+    color: #f59e0b;
+
+    transform: scale(1.12);
+}
+
+/* =========================================
+   SUBMIT BUTTON
+========================================= */
+
+.primary-btn {
+    width: 100%;
+
+    border: none;
+
+    background:
+        linear-gradient(
+            135deg,
+            #2563eb,
+            #4f46e5
+        );
+
+    color: #ffffff;
+
+    padding: 13px 18px;
+
+    border-radius: 10px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.primary-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(37, 99, 235, 0.25);
+}
+
+.primary-btn:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.primary-btn:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+}
+
+/* =========================================
+   RATING MESSAGE
+========================================= */
+
+.rating-message {
+    margin: 15px 0 0;
+
+    padding: 11px 13px;
+
+    border-radius: 8px;
+
+    background: #f0fdf4;
+
+    border: 1px solid #bbf7d0;
+
+    color: #15803d;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    text-align: center;
+}
+
+/* =========================================
+   LOADING
+========================================= */
+
+.loading {
+    min-height: 300px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #64748b;
+}
+
+.loading-spinner {
+    width: 42px;
+    height: 42px;
+
+    border: 4px solid #dbeafe;
+
+    border-top-color: #2563eb;
+
+    border-radius: 50%;
+
+    animation: spin 0.8s linear infinite;
+
+    margin-bottom: 15px;
+}
+
+.loading p {
+    margin: 0;
+
+    font-size: 15px;
+
+    font-weight: 500;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* =========================================
+   ERROR
+========================================= */
+
+.error-message {
+    padding: 15px 18px;
+
+    background: #fef2f2;
+
+    border: 1px solid #fecaca;
+
+    border-radius: 10px;
+
+    color: #b91c1c;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 25px;
+}
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-state {
+    background: #ffffff;
+
+    border: 1px dashed #cbd5e1;
+
+    border-radius: 18px;
+
+    padding: 70px 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 5px 20px rgba(15, 23, 42, 0.04);
+}
+
+.empty-icon {
+    width: 65px;
+    height: 65px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    border-radius: 18px;
+
+    font-size: 27px;
+}
+
+.empty-state h3 {
+    margin: 0 0 8px;
+
+    color: #334155;
+
+    font-size: 20px;
+}
+
+.empty-state p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 14px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .dashboard-content {
+        width: 90%;
+    }
+
+    .dashboard-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .store-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard-heading h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .dashboard-content {
+        padding: 35px 0 50px;
+    }
+
+    .dashboard-heading h1 {
+        font-size: 30px;
+    }
+
+    .dashboard-heading > div:first-child > p:last-child {
+        font-size: 14px;
+    }
+
+    .store-count {
+        width: 100%;
+
+        box-sizing: border-box;
+    }
+
+    .store-card {
+        padding: 20px;
+    }
+
+    .store-card-header {
+        flex-direction: column;
+    }
+
+    .store-rating {
+        align-self: flex-start;
+    }
+
+    .rating-options .star {
+        font-size: 27px;
+    }
+}
